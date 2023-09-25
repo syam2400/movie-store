@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST" ENCTYPE="multipart/form-data">
+<div class="mb-3">
+  <label class="form-label">username</label>
+  <input type="text" class="form-control"  placeholder="Enter usrename">
+</div>
+<div class="mb-3">
+  <label  class="form-label">first name</label>
+  <input type="text" class="form-control"  placeholder="entre first name">
+</div>
+<div class="mb-3">
+  <label  class="form-label">last name</label>
+  <input type="text" class="form-control"  placeholder="entre last name">
+</div><div class="mb-3">
+  <label  class="form-label">email</label>
+  <input type="text" class="form-control"  placeholder="entre email id">
+</div>
+<div class="mb-3">
+  <label  class="form-label">passsword</label>
+  <input type="password" class="form-control"  placeholder="entre password">
+</div>
+ <input type="submit" class="btn btn-primary">
+
+</form>
+{% endblock %}

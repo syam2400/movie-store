@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid p-4 " >
+    <div class="row">
+        <div class="col-md-4 m-1  " style="height:400px;border:solid" >
+           <img src="{{ k.image.url }}" >
+        </div>
+
+      <div class="col-md-4 m-1" >
+         <div class="col-md-12  ">
+            <h1>NAME       : {{ k.name }}</h1><br>
+            <h1>DESCRIPTION: {{ k.desc }}</h1>
+             <h1>YEAR      : {{ k.year }}</h1>
+         </div>
+         <div class="row col-md-16 " >
+
+             <div class="col-md-4 " >
+                <a href="{% url 'store:edit_movie' k.id %}" class="btn btn-danger">update</a></div>
+             <div class="col-md-4 ">
+                <a href="{% url 'store:delete' k.id %}" class="btn btn-danger">Delete</a></div>
+         </div>
+      </div>
+
+   </div>
+ </div>
+
+{% endblock %}

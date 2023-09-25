@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <div class="container-fluid bg-primary pt-2  " style="padding-left:1280px; height:60px">
+        <h4 style="position:absolute;left:0;color:white;">ONLINE MOVIESTORE</h4>
+        <a href="{% url 'store:add_movie' %}">
+            <button CLASS="btn-danger" style="height:40px">ADD MOVIE</button>
+        </a>
+        <!--        <a href="signup.html" ><button>SignUp</button></a>-->
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--  {% csrf_token %}-->
+
+<!--  <div class="mb-3" >-->
+<!--    <label class="form-label">MOVIE NAME:{{ f.name }}</label>-->
+<!--    <input type="text"  class="form-control" name="n">-->
+
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--    <label  class="form-label">DESCRIPTION:{{ f.desc }}</label>-->
+<!--    <input type="text" class="form-control" name="d" >-->
+<!--  </div>-->
+<!--     <div class="mb-3">-->
+<!--    <label class="form-label">YEAR:{{ f.year }}</label>-->
+<!--    <input type="text" class="form-control" name="y">-->
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--    <label  class="form-label">COVER:{{ f.image.url }}</label>-->
+<!--    <input type="file" name="i" class="form-control" placeholder="enter the image" >-->
+<!--  </div>-->
+<!--  <input type="submit" class="btn btn-primary">-->
+<!--</form>-->
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <input type="submit">
+</form>
+{% endblock %}

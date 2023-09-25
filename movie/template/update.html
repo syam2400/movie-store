@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+ {% csrf_token %}
+  <table>
+    {{ f.as_table  }}
+  </table>
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary">
+  </div>
+</form>
+{% endblock %}
